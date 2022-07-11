@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.ProtoypeController">
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+   <children>
+      <TabPane fx:id="tabPane" layoutY="1.0" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: aliceblue;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="homeTab" closable="false" text="Home">
+            <content>
+              <AnchorPane fx:id="paneHome" minHeight="0.0" minWidth="0.0" prefHeight="459.0" prefWidth="600.0">
+                     <children>
+                        <ImageView fitHeight="582.0" fitWidth="998.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/LeBonPain-splashscreen.PNG" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="86.0" layoutY="132.0" text="Prototype v1.0">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnExit" layoutX="711.0" layoutY="505.0" mnemonicParsing="false" onAction="#btnExitOnClick" text="Exit">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="85.0" layoutY="95.0" text="Baked Goods Delivery Service">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="86.0" layoutY="61.0" text="Le Bon Pain">
+                           <font>
+                              <Font name="Bauhaus 93" size="30.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnLogin" layoutX="85.0" layoutY="329.0" mnemonicParsing="false" onAction="#btnLoginOnClick" prefHeight="40.0" prefWidth="180.0" text="Login">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <PasswordField fx:id="inputUserPassword" layoutX="84.0" layoutY="283.0" prefHeight="25.0" prefWidth="180.0" promptText="Password">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </PasswordField>
+                        <TextField fx:id="inputUserName" layoutX="83.0" layoutY="237.0" prefHeight="25.0" prefWidth="180.0" promptText="Email Address">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="86.0" layoutY="210.0" text="Login to proceed:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnRegister" layoutX="85.0" layoutY="429.0" mnemonicParsing="false" onAction="#btnRegisterOnClick" prefHeight="40.0" prefWidth="180.0" text="Register">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="86.0" layoutY="404.0" text="New Customer?">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="registerTab" closable="false" text="User Registration">
+               <content>
+                  <AnchorPane fx:id="paneRegister" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="582.0" fitWidth="998.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/LeBonPain-background-flipped.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="56.0" layoutY="42.0" text="Please register an account:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="56.0" layoutY="87.0" text="First Name">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="56.0" layoutY="126.0" text="Last Name">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="56.0" layoutY="166.0" text="Email">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="56.0" layoutY="205.0" text="Phone">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="56.0" layoutY="244.0" text="Address">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="56.0" layoutY="334.0" text="Password">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="inputFldFirstName" layoutX="127.0" layoutY="81.0" prefHeight="25.0" prefWidth="190.0" promptText="First Name">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="inputFldLastName" layoutX="127.0" layoutY="120.0" prefWidth="190.0" promptText="Last Name">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="inputFldEmailAddress" layoutX="127.0" layoutY="160.0" prefWidth="190.0" promptText="Email Address">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="inputFldPhone" layoutX="127.0" layoutY="199.0" prefWidth="190.0" promptText="Contact Number">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextArea fx:id="txtAreaDeliveryAddress" layoutX="127.0" layoutY="238.0" prefHeight="80.0" prefWidth="190.0" promptText="Delivery Address" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextArea>
+                        <PasswordField fx:id="inputFldPassword" layoutX="127.0" layoutY="328.0" prefHeight="25.0" prefWidth="190.0" promptText="password">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </PasswordField>
+                        <Button fx:id="btnAddCustomer" layoutX="128.0" layoutY="437.0" mnemonicParsing="false" onAction="#btnAddCustomerOnClick" text="Register Account">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" width="2.0">
+                                 <color>
+                                    <Color red="0.33725491166114807" green="0.6039215922355652" blue="0.7490196228027344" opacity="0.75" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                        <Button fx:id="btnClear" layoutX="265.0" layoutY="437.0" mnemonicParsing="false" onAction="#btnClearOnClick" text="Clear">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" width="2.0">
+                                 <color>
+                                    <Color red="0.34040001034736633" green="0.6001399755477905" blue="0.7400000095367432" opacity="0.75" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                        <Button fx:id="btnHomeScreen" layoutX="124.0" layoutY="517.0" mnemonicParsing="false" onAction="#btnHomeScreenOnClick" prefHeight="40.0" prefWidth="191.0" text="Home">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="58.0" layoutX="129.0" layoutY="369.0" stroke="#c56f6f" strokeType="INSIDE" width="186.0" />
+                        <Label layoutX="137.0" layoutY="373.0" text="For testing, choose User Type:">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="radioBtnCustomer" layoutX="147.0" layoutY="396.0" mnemonicParsing="false" selected="true" text="Customer">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="accountType" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="radioBtnAdmin" layoutX="240.0" layoutY="396.0" mnemonicParsing="false" text="Admin" toggleGroup="$accountType" />
+                        <Label fx:id="labelRegisterSuccess" layoutX="128.0" layoutY="475.0" text="Registration Successful!" textFill="#05a117" visible="false">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="adminTab" closable="false" text="Admin Screen 1">
+               <content>
+                  <AnchorPane fx:id="paneAdmin" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="576.0" fitWidth="947.0" layoutX="-119.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/LeBonPain-background-flipped.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="26.0" layoutY="15.0" text="Add new product:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="inputFldProductName" layoutX="109.0" layoutY="45.0" prefHeight="25.0" prefWidth="175.0" promptText="Product Name">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="inputFldQuantity" layoutX="109.0" layoutY="80.0" prefHeight="25.0" prefWidth="175.0" promptText="Volume Qantity of Unit">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="inputFldUnitPrice" layoutX="108.0" layoutY="148.0" prefHeight="25.0" prefWidth="175.0" promptText="0.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextArea fx:id="txtAreaProdIngredients" layoutX="108.0" layoutY="183.0" prefHeight="80.0" prefWidth="175.0" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextArea>
+                        <Label layoutX="26.0" layoutY="45.0" text="Name">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="86.0" text="Quantity">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="26.0" layoutY="152.0" text="Unit Price">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="26.0" layoutY="117.0" text="Unit">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="26.0" layoutY="186.0" text="Ingredients">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnAddProduct" layoutX="108.0" layoutY="268.0" mnemonicParsing="false" onAction="#btnAddProductOnClick" text="Add Product">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" width="2.0">
+                                 <color>
+                                    <Color red="0.33725491166114807" green="0.6039215922355652" blue="0.7490196228027344" opacity="0.75" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                        <Button fx:id="btnClearProduct" layoutX="232.0" layoutY="268.0" mnemonicParsing="false" onAction="#btnClearProdOnClick" text="Clear">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" width="2.0">
+                                 <color>
+                                    <Color red="0.34040001034736633" green="0.6001399755477905" blue="0.7400000095367432" opacity="0.75" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                        <ComboBox fx:id="unitsCombobox" layoutX="109.0" layoutY="115.0" prefHeight="25.0" prefWidth="175.0" promptText="Select" />
+                        <Label layoutX="27.0" layoutY="365.0" text="Add new delivery schedule:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9896" height="447.0" layoutX="316.0" layoutY="9.0" stroke="#b1b1b1" strokeType="INSIDE" width="455.0" />
+                        <TextField fx:id="inputFldPostcode" layoutX="112.0" layoutY="394.0" prefHeight="25.0" prefWidth="175.0" promptText="Postcode">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="inputFldCost" layoutX="113.0" layoutY="461.0" prefHeight="25.0" prefWidth="175.0" promptText="0.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="27.0" layoutY="399.0" text="Postcode">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="28.0" layoutY="432.0" text="Delivery Day">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="466.0" text="Delivery Cost">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="daysCombobox" layoutX="113.0" layoutY="429.0" prefHeight="25.0" prefWidth="175.0" promptText="Select Day" />
+                        <Button fx:id="btnAddDeliverySchedule" layoutX="113.0" layoutY="496.0" mnemonicParsing="false" onAction="#btnAddDeliveryScheduleOnClick" text="Add Schedule">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" width="2.0">
+                                 <color>
+                                    <Color red="0.33725491166114807" green="0.6039215922355652" blue="0.7490196228027344" opacity="0.75" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                        <Button fx:id="btnClearSchedule" layoutX="237.0" layoutY="496.0" mnemonicParsing="false" onAction="#btnClearScheduleOnClick" text="Clear">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" width="2.0">
+                                 <color>
+                                    <Color red="0.34040001034736633" green="0.6001399755477905" blue="0.7400000095367432" opacity="0.75" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                        <Label layoutX="326.0" layoutY="15.0" text="Delete product:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Separator blendMode="MULTIPLY" layoutX="29.0" layoutY="344.0" prefHeight="3.0" prefWidth="255.0" />
+                        <TextArea fx:id="txtAreaErrorMessages" editable="false" layoutX="315.0" layoutY="461.0" prefHeight="70.0" prefWidth="455.0" promptText="System Messages..." wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </TextArea>
+                        <Button fx:id="btnShowProductsAdmin" layoutX="325.0" layoutY="228.0" mnemonicParsing="false" onAction="#btnShowProductsAdminOnClick" text="Show Products">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" width="2.0">
+                                 <color>
+                                    <Color red="0.34040001034736633" green="0.6001399755477905" blue="0.7400000095367432" opacity="0.75" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                        <TableView fx:id="productTableAdmin" layoutX="325.0" layoutY="44.0" prefHeight="179.0" prefWidth="438.0">
+                           <columns>
+                              <TableColumn fx:id="productColIDAdmin" prefWidth="38.66668701171875" text="ID" />
+                              <TableColumn fx:id="productCol1Admin" prefWidth="99.99993896484375" text="Name" />
+                              <TableColumn fx:id="productCol2Admin" prefWidth="43.3333740234375" text="Qty" />
+                              <TableColumn fx:id="productCol3Admin" prefWidth="42.666656494140625" text="Unit" />
+                              <TableColumn fx:id="productCol4Admin" prefWidth="61.99993896484375" text="Price" />
+                              <TableColumn fx:id="productCol5Admin" prefWidth="172.666748046875" text="Ingredients" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="btnEditProduct" layoutX="646.0" layoutY="416.0" mnemonicParsing="false" onAction="#btnEditProductOnClick" text="Update Product">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" width="2.0">
+                                 <color>
+                                    <Color red="0.34040001034736633" green="0.6001399755477905" blue="0.7400000095367432" opacity="0.75" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                        <Button fx:id="btnDeleteProduct" layoutX="648.0" layoutY="228.0" mnemonicParsing="false" onAction="#btnDeleteProductOnClick" text="Delete Selected" textFill="#fb0000">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" width="2.0">
+                                 <color>
+                                    <Color red="0.34040001034736633" green="0.6001399755477905" blue="0.7400000095367432" opacity="0.75" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                        <TextField fx:id="inputEditProductName" layoutX="373.0" layoutY="306.0" prefHeight="29.0" prefWidth="160.0" promptText="Product Name">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="inputEditQuantity" layoutX="373.0" layoutY="343.0" prefHeight="25.0" prefWidth="160.0" promptText="Qantity of Unit">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="inputProductID" editable="false" layoutX="482.0" layoutY="414.0" prefHeight="29.0" prefWidth="51.0" promptText="ID">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextArea fx:id="txtAreaEditIngredients" layoutX="603.0" layoutY="345.0" prefHeight="65.0" prefWidth="160.0" promptText="Ingredients" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextArea>
+                        <Label layoutX="326.0" layoutY="278.0" text="Edit product:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="inputEditUnit" layoutX="373.0" layoutY="379.0" prefHeight="25.0" prefWidth="160.0" promptText="Unit Type">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="inputEditPrice" layoutX="603.0" layoutY="306.0" prefHeight="29.0" prefWidth="160.0" promptText="Price">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="btnSelectProduct" layoutX="541.0" layoutY="228.0" mnemonicParsing="false" onAction="#btnSelectProductOnClick" text="Edit Selected">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" width="2.0">
+                                 <color>
+                                    <Color red="0.34040001034736633" green="0.6001399755477905" blue="0.7400000095367432" opacity="0.75" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                        <Label layoutX="337.0" layoutY="311.0" text="Name" />
+                        <Label layoutX="324.0" layoutY="349.0" text="Quantity" />
+                        <Label layoutX="345.0" layoutY="385.0" text="Unit" />
+                        <Label layoutX="574.0" layoutY="311.0" text="Price" />
+                        <Label layoutX="540.0" layoutY="349.0" text="Ingredients" />
+                        <Label layoutX="420.0" layoutY="420.0" text="Product ID" textFill="#969393">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnClearEditProduct" layoutX="589.0" layoutY="416.0" mnemonicParsing="false" onAction="#btnClearEditProductOnClick" text="Clear">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" width="2.0">
+                                 <color>
+                                    <Color red="0.34040001034736633" green="0.6001399755477905" blue="0.7400000095367432" opacity="0.75" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Button>                                                 
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="adminTabTwo" closable="false" text="Admin Screen 2">
+               <content>
+                  <AnchorPane fx:id="paneAdminTwo" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="576.0" fitWidth="947.0" layoutX="-86.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/LeBonPain-background-flipped.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="35.0" layoutY="31.0" text="View Customer Orders:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="orderTableAdmin" layoutX="28.0" layoutY="64.0" prefHeight="402.0" prefWidth="301.0">
+                           <columns>
+                              <TableColumn fx:id="orderColOrderNumber" prefWidth="49.33334159851074" text="Order#" />
+                              <TableColumn fx:id="orderColCustomer" prefWidth="103.99994659423828" text="Customer Name" />
+                              <TableColumn fx:id="orderColProduct" prefWidth="148.0000457763672" text="Product Name" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="btnShowCustomerOrders" layoutX="35.0" layoutY="484.0" mnemonicParsing="false" onAction="#btnShowCustomerOrdersOnClick" text="Show Customer Orders">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" width="2.0">
+                                 <color>
+                                    <Color red="0.34040001034736633" green="0.6001399755477905" blue="0.7400000095367432" opacity="0.75" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                        <Button fx:id="btnShowCustomers" layoutX="345.0" layoutY="420.0" mnemonicParsing="false" onAction="#btnShowCustomersOnClick" text="Show Customers">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" width="2.0">
+                                 <color>
+                                    <Color red="0.33725491166114807" green="0.6039215922355652" blue="0.7490196228027344" opacity="0.75" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                        <TableView fx:id="customerTable" layoutX="345.0" layoutY="64.0" prefHeight="350.0" prefWidth="431.0">
+                           <columns>
+                              <TableColumn fx:id="customerCol1" prefWidth="70.0" text="Name" />
+                              <TableColumn fx:id="customerCol2" prefWidth="74.6666259765625" text="Last Name" />
+                              <TableColumn fx:id="customerCol3" minWidth="0.0" prefWidth="82.66665649414062" text="Phone" />
+                              <TableColumn fx:id="customerCol4" prefWidth="81.3333740234375" text="Email" />
+                              <TableColumn fx:id="customerCol5" prefWidth="121.333251953125" text="Address" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="btnSearchCustomers" layoutX="506.0" layoutY="420.0" mnemonicParsing="false" onAction="#btnSearchCustomersOnClick" text="Find Customer">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" width="2.0">
+                                 <color>
+                                    <Color red="0.34040001034736633" green="0.6001399755477905" blue="0.7400000095367432" opacity="0.75" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                        <TextField fx:id="inputFldSearchCustomers" layoutX="620.0" layoutY="420.0" prefHeight="29.0" prefWidth="155.0" promptText="search anything..">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="345.0" layoutY="31.0" text="View Customers:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="txtAreaErrorMessagesTwo" editable="false" layoutX="345.0" layoutY="466.0" prefHeight="73.0" prefWidth="431.0" promptText="System Messages..." wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab fx:id="customerTab" closable="false" text="Orders &amp; Deliveries">
+            <content>
+              <AnchorPane fx:id="paneCustomer" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="576.0" fitWidth="947.0" layoutX="-86.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/LeBonPain-background-flipped.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="58.0" layoutY="35.0" text="Order">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="orderTable" layoutX="58.0" layoutY="74.0" prefHeight="402.0" prefWidth="401.0">
+                           <columns>
+                              <TableColumn fx:id="orderTableOrderNumber" prefWidth="75.0" text="Order#" />
+                              <TableColumn fx:id="orderTableCustomerName" prefWidth="151.99996948242188" text="Customer Name" />
+                              <TableColumn fx:id="orderTableProductName" prefWidth="172.00006103515625" text="Product Name" />
+                           </columns>
+                        </TableView>
+                        <TableView fx:id="scheduleTable" layoutX="487.0" layoutY="72.0" prefHeight="405.0" prefWidth="250.0">
+                           <columns>
+                              <TableColumn fx:id="scheduleCol1" editable="false" prefWidth="80.00009155273438" style="text-align: center;" text="Postcode" />
+                              <TableColumn fx:id="scheduleCol2" editable="false" prefWidth="80.6666259765625" style="text-align: center;" text="Delivery Day" />
+                              <TableColumn fx:id="scheduleCol3" editable="false" prefWidth="89.333251953125" style="text-align: center;" text="Price" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="btnViewOrderOnClick" layoutX="198.0" layoutY="489.0" mnemonicParsing="false" onAction="#btnViewOrderOnClick" text="View My Order">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" width="2.0">
+                                 <color>
+                                    <Color red="0.34040001034736633" green="0.6001399755477905" blue="0.7400000095367432" opacity="0.75" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                        <Button fx:id="btnDisplaySchedule" layoutX="550.0" layoutY="489.0" mnemonicParsing="false" onAction="#btnDisplayScheduleOnClick" text="Display Schedule">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" width="2.0">
+                                 <color>
+                                    <Color red="0.34040001034736633" green="0.6001399755477905" blue="0.7400000095367432" opacity="0.75" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                        <Label layoutX="487.0" layoutY="35.0" text="Delivery Schedule">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="checkoutTab" closable="false" text="Shopping &amp; Checkout">
+               <content>
+                  <AnchorPane fx:id="paneCustomer1" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="576.0" fitWidth="947.0" layoutX="-86.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/LeBonPain-background-flipped.png" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="productTableShop" layoutX="34.0" layoutY="41.0" prefHeight="429.0" prefWidth="456.0">
+                           <columns>
+                              <TableColumn fx:id="productColShopID" prefWidth="42.666656494140625" text="ID" />
+                              <TableColumn fx:id="productColShopName" prefWidth="117.33331298828125" text="Name" />
+                              <TableColumn fx:id="productColShopQty" prefWidth="52.66668701171875" text="Qty" />
+                              <TableColumn fx:id="productColShopUnit" prefWidth="48.0" text="Unit" />
+                              <TableColumn fx:id="productColShopPrice" prefWidth="48.6666259765625" text="Price" />
+                              <TableColumn fx:id="productColShopIngr" maxWidth="143.3333740234375" prefWidth="143.3333740234375" text="Ingredients" />
+                           </columns>
+                        </TableView>
+                        <TableView fx:id="productTableCart" layoutX="523.0" layoutY="41.0" prefHeight="429.0" prefWidth="264.0">
+                           <columns>
+                              <TableColumn fx:id="productColCartName" prefWidth="135.0" text="Name" />
+                              <TableColumn fx:id="productColCartQty" prefWidth="61.0" text="Qty" />
+                              <TableColumn fx:id="productColCartPrice" prefWidth="64.0" text="Price" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="btnAddToCart1" layoutX="157.0" layoutY="480.0" mnemonicParsing="false" onAction="#btnAddToCartOnClick" text="Add to Cart">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" width="2.0">
+                                 <color>
+                                    <Color red="0.34040001034736633" green="0.6001399755477905" blue="0.7400000095367432" opacity="0.75" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                        <Button fx:id="btnShowProductsShop" layoutX="34.0" layoutY="480.0" mnemonicParsing="false" onAction="#btnShowProductsShopOnClick" text="Show Products">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" width="2.0">
+                                 <color>
+                                    <Color red="0.34040001034736633" green="0.6001399755477905" blue="0.7400000095367432" opacity="0.75" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                        <Button fx:id="btnCheckout1" layoutX="523.0" layoutY="480.0" mnemonicParsing="false" onAction="#btnCheckoutOnClick" text="Place Order">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" width="2.0">
+                                 <color>
+                                    <Color red="0.34040001034736633" green="0.6001399755477905" blue="0.7400000095367432" opacity="0.75" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                        <Button fx:id="btnShopClearCart" layoutX="706.0" layoutY="480.0" mnemonicParsing="false" onAction="#btnShopClearCart" text="Clear Cart">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" width="2.0">
+                                 <color>
+                                    <Color red="0.34040001034736633" green="0.6001399755477905" blue="0.7400000095367432" opacity="0.75" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Button>
+                        <Label fx:id="labelPleaseSelect" layoutX="262.0" layoutY="482.0" text="Please select a product!" visible="false">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
