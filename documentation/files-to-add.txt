@@ -1,1 +1,23 @@
 
+Project Management:
+- Agile sprint
+- Tasks
+- Priorities
+- To Do list
+- Completed tracker
+
+UML diagrams:
+- Update Order diagram and dependencies
+- Create User diagram and children
+- Create TCP/connection diagram and relationship
+
+Finalise Design mockup (reponsive UI):
+- Home screen
+- Login
+- Shop
+- Cart
+- View orders placed
+
+Write user documentation:
+- Admin documentation, adding/editing products, customers, orders and more
+- Customer Help (accessible within the program)
