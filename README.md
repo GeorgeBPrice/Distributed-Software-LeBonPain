@@ -1,4 +1,4 @@
-Distributed Software, LeBonPain
+#Distributed Software, LeBonPain
 
 This is an alpha version of a prototype distributed software, where clients of a large bakery (Le Bon Pain)
 can place orders for baked goods that will be delivered at scheduled times. This is important for cafes, 
